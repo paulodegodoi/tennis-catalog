@@ -7,21 +7,43 @@
 
 .main {
     display: flex;
-    height: 100vh;
+    height: 100%;
     background-color: #191B21;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    height: 70px;
+    width: 100%;
+}
+
+nav h1 {
+    font-size: 2rem;
+}
+
+nav button {
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 .menuLateral {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 15%;
     background-color: #191B21;
 }
 
-nav {
-    color: white;
-    height: 70px;
-    width: 100%;
+.menuLateral a {
+    font-size: 1.5rem;
+    margin: 1rem;
+    text-decoration: none;
+    color: gray;
 }
 
 .catalogo {
