@@ -46,6 +46,8 @@ nav button {
     justify-content: center;
     align-items: center;
     width: 15%;
+    height: 100%;
+    position: fixed;
     background-color: #191B21;
 }
 
@@ -59,8 +61,8 @@ nav button {
 /* side menu style end */
 
 .catalogo {
-    width: 75%;
-    margin-top: 5rem;
+    margin-left: 350px;
+    margin-top: 3rem;
     text-align: center;
 }
 
