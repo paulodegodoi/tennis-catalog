@@ -5,11 +5,17 @@
     font-family: 'Inconsolata', monospace;
 }
 
+body {
+    background-color: #191B21;
+}
+
 .main {
     display: flex;
     height: 100%;
     background-color: #191B21;
 }
+
+/* navbar style init */
 
 nav {
     display: flex;
@@ -30,6 +36,10 @@ nav button {
     cursor: pointer;
 }
 
+/* navbar style end */
+
+/* side menu style init */
+
 .menuLateral {
     display: flex;
     flex-direction: column;
@@ -46,6 +56,8 @@ nav button {
     color: gray;
 }
 
+/* side menu style end */
+
 .catalogo {
     width: 75%;
     margin-top: 5rem;
@@ -61,29 +73,117 @@ nav button {
     margin: auto;
 }
 
-.containerMain .image {
-    margin: 10px 10px 10px 10px;
-}
-
 .itemBestSellers {
     display: flex;
     flex-direction: column;
     width: 550px;
     height: 415px;
-    border: 1px solid white;
+    border: 1px solid rgba(255, 255, 255, 0.093);
+    border-radius: 1rem;
+    position: relative;
+}
+
+.itemBestSellers input {
+    display: none;
+}
+
+.sliderBestSellers {
+    overflow: hidden;
+    height: 284px;
+    margin: 1rem;
     border-radius: 1rem;
 }
 
-.itemBestSellers img {
+.sliderBestSellers .slide {
+    position: relative;
+    transition: 1s;
+    background-color: #EEEFF1;
+}
+
+.itemBestSellers .image img {
     width: 100%;
-    /* height: 300px; */
-    border-radius: 1rem;
 }
 
 .itemBestSellers .title {
     display: flex;
     justify-content: space-between;
     padding: 1rem 2rem;
+}
+
+.manual-navigation {
+    position: absolute;
+    width: 550px;
+    bottom: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid gray;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 10px;
+}
+
+.manual-btn:hover {
+    background-color: black;
+}
+
+#radio1:checked ~ .first {
+    margin-bottom: -10;
+}
+
+#radio2:checked ~ .first {
+    margin-bottom: -55%;
+}
+
+#radio3:checked ~ .first {
+    margin-bottom: -110%;
+}
+
+#radio4:checked ~ .first {
+    margin-bottom: -165%;
+}
+
+.navigation-auto {
+    position: absolute;
+    width: 518px;
+    bottom: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-auto div {
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.navigation-auto div:not(:last-child) {
+    margin-right: 10px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+    background-color: black;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+    background-color: black;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+    background-color: black;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+    background-color: black;
 }
 
 .othersSellers {
@@ -97,12 +197,7 @@ nav button {
     height: 200px;
     border-radius: 1rem;
     margin-bottom: 1rem;
-}
-
-.othersSellers .itemNew {
-    display: flex;
-    border: 1px solid white;
-    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.093);
 }
 
 .othersSellers .image {
@@ -115,16 +210,23 @@ nav button {
     border-radius: 1rem;
 }
 
-.othersSellers .itemLowPrice {
-    border: 1px solid white;
+.othersSellers .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.mostseen {
+.othersSellers .title h2 {
+    padding: 1rem;
+}
+
+
+.mostSeen {
     display: inline-flex;
     justify-content: space-between;
 }
 
-.mostseen > .otherItem {
+.mostSeen > .otherItem {
     margin: 1rem;
     width: 270px;
     height: 300px;
@@ -133,7 +235,7 @@ nav button {
     color: white;
 }
 
-.mostseen > .otherItem img {
+.mostSeen > .otherItem img {
     margin: 0.5rem;
     border-radius: 1rem;
     height: 200px;
