@@ -4,7 +4,7 @@ document.getElementById("radio1").checked = true
 let nameTennis = document.getElementById("nameTennis")
 nameTennis.innerHTML = 'ULTRABOOST 5.0 DNA'
 
-let radio4 = document.getElementById("radio4").checked
+let radio = document.getElementById("radio1").checked
 
 
 setInterval( function() {
@@ -12,22 +12,22 @@ setInterval( function() {
 }, 5000)
 
 function onclick1() {
-    radio4.checked = true
+    radio.checked = true
     nameTennis.innerHTML = 'ULTRABOOST 5.0 DNA'
 }
 
 function onclick2() {
-    radio4.checked = true
+    radio.checked = true
     nameTennis.innerHTML = 'GRAND COURT BASE'
 }
 
 function onclick3() {
-    radio4.checked = true
+    radio.checked = true
     nameTennis.innerHTML = 'D-Formation'
 }
 
 function onclick4() {
-    radio4.checked = true
+    radio.checked = true
     nameTennis.innerHTML = 'Pegasus Trail 3'
 }
 

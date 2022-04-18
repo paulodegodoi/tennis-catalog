@@ -6,22 +6,23 @@
 }
 
 body {
-    background-color: #191B21;
+    background-color: #fff;
 }
 
 .main {
     display: flex;
-    height: 100%;
-    background-color: #191B21;
+    padding-bottom: 2rem;
 }
+
+/* side menu style init */
+
+/* side menu style end */
 
 /* navbar style init */
 
 nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    color: white;
+    width: 100%;
+    color: black;
     height: 70px;
     width: 100%;
 }
@@ -31,48 +32,29 @@ nav h1 {
 }
 
 nav button {
+    float: right;
     background: none;
     border: none;
     cursor: pointer;
+    margin: 1rem .5rem;
 }
 
 /* navbar style end */
 
-/* side menu style init */
-
-.menuLateral {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 15%;
-    height: 100%;
-    position: fixed;
-    background-color: #191B21;
-}
-
-.menuLateral a {
-    font-size: 1.5rem;
-    margin: 1rem;
-    text-decoration: none;
-    color: gray;
-}
-
-/* side menu style end */
-
 .catalogo {
-    margin-left: 350px;
+    /* display: flex; */
+    /* flex-direction: column; */
+    width: 1200px;
+    margin: auto;
     margin-top: 3rem;
     text-align: center;
 }
 
 .containerMain {
     display: flex;
-    justify-content: space-around;
-    color: white;
-    width: 1250px;
+    justify-content: space-between;
+    color: black;
     height: 450px;
-    margin: auto;
 }
 
 .itemBestSellers {
@@ -80,9 +62,10 @@ nav button {
     flex-direction: column;
     width: 550px;
     height: 415px;
-    border: 1px solid rgba(255, 255, 255, 0.093);
+    border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 1rem;
     position: relative;
+    padding: 1rem;
 }
 
 .itemBestSellers input {
@@ -92,7 +75,6 @@ nav button {
 .sliderBestSellers {
     overflow: hidden;
     height: 284px;
-    margin: 1rem;
     border-radius: 1rem;
 }
 
@@ -154,14 +136,14 @@ nav button {
 
 .navigation-auto {
     position: absolute;
-    width: 518px;
+    width: 550px;
     bottom: 30%;
     display: flex;
     justify-content: center;
 }
 
 .navigation-auto div {
-    border: 2px solid black;
+    border: 2px solid rgba(0, 0, 0, 0.15);
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
@@ -199,16 +181,18 @@ nav button {
     height: 200px;
     border-radius: 1rem;
     margin-bottom: 1rem;
-    border: 1px solid rgba(255, 255, 255, 0.093);
+    border: 1px solid rgba(0, 0, 0, 0.15);
 }
 
 .othersSellers .image {
     width: 250px;
+    height: 180px;
 }
 
 .othersSellers .image img {
     width: 100%;
     height: 100%;
+    margin: 0.5rem;
     border-radius: 1rem;
 }
 
@@ -224,17 +208,16 @@ nav button {
 
 
 .mostSeen {
-    display: inline-flex;
     justify-content: space-between;
+    display: inline-flex;
+    width: 100%;
 }
 
 .mostSeen > .otherItem {
-    margin: 1rem;
-    width: 270px;
     height: 300px;
-    border: 1px solid rgba(255, 255, 255, 0.093);
+    border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 1rem;
-    color: white;
+    color: black;
 }
 
 .mostSeen > .otherItem img {
