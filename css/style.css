@@ -21,14 +21,23 @@ body {
 /* navbar style init */
 
 nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     width: 100%;
     color: black;
-    height: 70px;
+    height: 40px;
     width: 100%;
 }
 
-nav h1 {
-    font-size: 2rem;
+nav input {
+    border: none;
+    font-size: 1rem;
+    outline: none;
+}
+
+nav img {
+    width: 25px;
 }
 
 nav button {
@@ -42,8 +51,6 @@ nav button {
 /* navbar style end */
 
 .catalogo {
-    /* display: flex; */
-    /* flex-direction: column; */
     width: 1200px;
     margin: auto;
     margin-top: 3rem;
@@ -226,3 +233,112 @@ nav button {
     height: 200px;
     width: 250px;
 }
+
+/* media responsive start */
+
+@media (max-width: 1250px) {
+
+    .catalogo {
+        width: 900px;
+    }
+
+    .containerMain {
+        height: 450px;
+    }
+
+    .othersSellers {
+        width: 35%;
+        height: 415px;
+    }
+
+    .othersSellers > div {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .othersSellers > div .image {
+        width: 100%;
+        height: 200px;
+    }
+
+    .othersSellers > div .image img {
+        margin: 0.5rem;
+        width: 270px;
+        height: 180px;
+    }
+
+    .othersSellers > div .title {
+        display: none;
+    }
+
+    .mostSeen {
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        border-radius: 1rem;
+        overflow: auto;
+    }
+
+    .mostSeen .otherItem {
+        margin: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    
+    .catalogo {
+        max-width: 550px;
+        overflow: hidden;
+        margin: 1rem;
+    }
+
+    .containerMain {
+        flex-direction: column;
+        height: 650px;
+    }
+
+    nav input {
+        display: none;
+    }
+
+    .itemBestSellers {
+        width: auto;
+    }
+
+    .sliderBestSellers {
+        height: 240px;
+    }
+
+    .sliderBestSellers .navigation-auto {
+        display: none
+    }
+
+    .manual-navigation {
+        display: none;
+    }
+
+    .othersSellers {
+        width: 100%;
+        flex-direction: row;
+        overflow: auto;
+        margin-top: 1rem;
+    }
+
+    .othersSellers > div {
+        height: auto;
+    }
+
+    .othersSellers > div .image img {
+        height: 200px;
+
+    }
+
+    .othersSellers > div .title {
+        display: block;
+        margin-top: 1rem;
+    }
+
+    .othersSellers > div .title h2 {
+        padding: 0;
+    }
+}
+
+/* media responsive end */
