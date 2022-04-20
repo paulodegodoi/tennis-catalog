@@ -101,6 +101,16 @@ nav button {
     padding: 1rem 2rem;
 }
 
+.itemBestSellers .title .prices {
+    display: flex;
+    flex-direction: column;
+}
+
+.itemBestSellers .title .prices h3 {
+    color: red;
+    text-decoration: line-through;
+}
+
 .manual-navigation {
     position: absolute;
     width: 550px;
@@ -340,5 +350,24 @@ nav button {
         padding: 0;
     }
 }
+
+@media (max-width: 500px) {
+    #radio1:checked ~ .first {
+        margin-bottom: 0;
+    }
+    
+    #radio2:checked ~ .first {
+        margin-bottom: -50%;
+    }
+    
+    #radio3:checked ~ .first {
+        margin-bottom: -110%;
+    }
+    
+    #radio4:checked ~ .first {
+        margin-bottom: -165%;
+    }
+}
+
 
 /* media responsive end */
