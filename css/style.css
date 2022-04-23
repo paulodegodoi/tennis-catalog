@@ -352,12 +352,17 @@ nav button {
 }
 
 @media (max-width: 500px) {
+
+    .sliderBestSellers {
+        height: 175px;
+    }
+    
     #radio1:checked ~ .first {
         margin-bottom: 0;
     }
     
     #radio2:checked ~ .first {
-        margin-bottom: -50%;
+        margin-bottom: -55%;
     }
     
     #radio3:checked ~ .first {
@@ -365,7 +370,7 @@ nav button {
     }
     
     #radio4:checked ~ .first {
-        margin-bottom: -165%;
+        margin-bottom: -168%;
     }
 }
 
