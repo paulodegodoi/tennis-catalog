@@ -7,6 +7,7 @@
 
 body {
     background-color: #fff;
+    overflow-x: hidden;
 }
 
 .main {
@@ -14,9 +15,23 @@ body {
     padding-bottom: 2rem;
 }
 
-/* side menu style init */
+/* side Cart style init */
 
-/* side menu style end */
+.storeCart {
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    width: 30vw;
+    height: 92vh;
+    background-color: black;
+    transform: translateX(100%);
+}
+
+.storeCart.active {
+    transform: translateX(0);
+}
+
+/* side Cart style end */
 
 /* navbar style init */
 
@@ -46,6 +61,10 @@ nav button {
     border: none;
     cursor: pointer;
     margin: 1rem .5rem;
+}
+
+nav .total {
+    margin-top: -12px;
 }
 
 /* navbar style end */

@@ -16,17 +16,22 @@
     <body>
         <div class="main">
             <div class="catalogo">
-                <div class="navbar">
+                <div class="storeCart">aa</div>
+                <header class="navbar">
                     <nav>
                         <input type="text" placeholder="Buscar" />
                         <button class="search">
                             <img src="imagens/loupe.png" alt="loupe" />
                         </button>
-                        <button class="cart">
-                            <img src="imagens/shopping-cart.png" alt="cart" />
+                        <button class="cart" onclick="openCart()">
+                            <!-- <p id="amount"></p> -->
+                            <img
+                                src="imagens/shopping-cart-empty.png"
+                                alt="cart"
+                            />
                         </button>
                     </nav>
-                </div>
+                </header>
                 <div class="containerMain">
                     <div class="itemBestSellers">
                         <div class="sliderBestSellers">
@@ -130,7 +135,7 @@
                     </div>
                 </div>
                 <div class="mostSeen">
-                    <div class="otherItem">
+                    <!-- <div class="otherItem">
                         <div class="image">
                             <img
                                 src="./imagens/nike/Air-Force-1-07-LV8.jpg"
@@ -177,10 +182,12 @@
                             <h2>Forum Mid</h2>
                             <h2>R$ 699,99</h2>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
     </body>
     <script src="./scripts/slide.js"></script>
+    <script src="./scripts/produtos.js"></script>
+    <script src="./scripts/cart.js"></script>
 </html>
