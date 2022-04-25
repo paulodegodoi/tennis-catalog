@@ -1,3 +1,7 @@
 function openCart() {
-    alert('Teste')
+    document.getElementById("navCart").style.width = '45vw';
+}
+
+function closeCart() {
+    document.getElementById("navCart").style.width = '0';
 }

@@ -3,19 +3,22 @@ const items = [
         id: 0,
         nome: 'Air Force 1',
         img: './imagens/nike/Air-Force-1.jpg',
-        quantidade: 0
+        quantidade: 0,
+        numberItem: 0
     },
     {
         id: 1,
         nome: 'Air Max 90',
         img: './imagens/nike/Air-Max-95.jpg',
-        quantidade: 0
+        quantidade: 0,
+        numberItem: 0
     },
     {
         id: 2,
         nome: 'Forum Mid',
         img: './imagens/adidas/FORUM MID.jpg',
-        quantidade: 0
+        quantidade: 0,
+        numberItem: 0
     },
 ]
 
@@ -40,18 +43,17 @@ initStore = () => {
 
 initStore();
 
-updateCart = () => {
+updateIconCart = () => {
     let containerCart = document.querySelector('.cart');
-    const total = items.map(item => item.quantidade).reduce((prev, curr) => prev + curr, 0);
+    const total = items.map(item => item.numberItem).reduce((prev, curr) => prev + curr, 0);
 
     items.map((val) => {
-        if(val.quantidade > 0) {
-        console.log(total)
+        if(val.numberItem > 0) {
         containerCart.innerHTML = ""
 
         containerCart.innerHTML += `
         
-        <p class="total">`+total+`</p>
+        <p class="total"x'>`+total+`</p>
         <img src= "./imagens/shopping-cart.png" />
 
         `;
@@ -60,6 +62,38 @@ updateCart = () => {
 }
 
 let links = document.getElementsByTagName('a');
+
+for(let i = 0; i < links.length; i++) {
+    links[i].addEventListener("click", function(){
+        let key = this.getAttribute('key');
+        items[key].numberItem++;
+        updateIconCart()
+        return false;
+    })
+}
+
+updateCart = () => {
+    let itemsCart = document.getElementById("navCart");
+    let img = document.getElementById("img");
+    itemsCart.innerHTML = `<a href="#" class="closebtn" onclick="closeCart()"
+            >&times;</a
+        >`;
+    items.map((val) => {
+        if(val.quantidade > 0) {
+            
+            itemsCart.innerHTML += `
+        
+            <div> 
+                <div id="img"> <img src= "`+val.img+`" /> </div> 
+                <div>
+                    <p>`+val.nome+`</p>
+                    <p> Quantidade: `+val.quantidade+`</p>
+                </div>
+            </div>
+        `;
+        }
+    })
+}
 
 for(let i = 0; i < links.length; i++) {
     links[i].addEventListener("click", function(){

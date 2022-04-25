@@ -7,33 +7,53 @@
 
 body {
     background-color: #fff;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 .main {
     display: flex;
-    padding-bottom: 2rem;
 }
 
 /* side Cart style init */
 
 .storeCart {
-    position: absolute;
-    top: 8vh;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 9;
+    top: 0;
     right: 0;
-    width: 30vw;
-    height: 92vh;
-    background-color: black;
-    transform: translateX(100%);
+    width: 0;
+    height: 100%;
+    transition: all 0.5s;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.09);
+
+    /* transform: translateX(100%); */
 }
 
-.storeCart.active {
-    transform: translateX(0);
+.storeCart > div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.storeCart #img {
+    margin: .5rem;
+}
+
+.storeCart img {
+    width: 150px;
 }
 
 /* side Cart style end */
 
 /* navbar style init */
+
+.navbar {
+    margin-top: 1rem;
+}
 
 nav {
     display: flex;
@@ -72,7 +92,7 @@ nav .total {
 .catalogo {
     width: 1200px;
     margin: auto;
-    margin-top: 3rem;
+    /* margin-top: 3rem; */
     text-align: center;
 }
 

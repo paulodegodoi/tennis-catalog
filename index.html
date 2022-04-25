@@ -16,13 +16,19 @@
     <body>
         <div class="main">
             <div class="catalogo">
-                <div class="storeCart">aa</div>
+                <div id="navCart" class="storeCart">
+                    <a href="#" class="closebtn" onclick="closeCart()"
+                        >&times;</a
+                    >
+                </div>
+                <!-- <div class="storeCart">aa</div> -->
                 <header class="navbar">
                     <nav>
                         <input type="text" placeholder="Buscar" />
                         <button class="search">
                             <img src="imagens/loupe.png" alt="loupe" />
                         </button>
+
                         <button class="cart" onclick="openCart()">
                             <!-- <p id="amount"></p> -->
                             <img
