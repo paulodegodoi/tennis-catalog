@@ -44,17 +44,26 @@ initStore = () => {
 initStore();
 
 updateIconCart = () => {
-    let containerCart = document.querySelector('.cart');
+    let containerCart1 = document.getElementsByClassName("cart")[0];
+    let containerCart2 = document.getElementsByClassName("cart")[1];
     const total = items.map(item => item.numberItem).reduce((prev, curr) => prev + curr, 0);
 
     items.map((val) => {
         if(val.numberItem > 0) {
-        containerCart.innerHTML = ""
+        containerCart1.innerHTML = ""
+        containerCart2.innerHTML = ""
 
-        containerCart.innerHTML += `
+        containerCart1.innerHTML += `
         
-        <p class="total"x'>`+total+`</p>
-        <img src= "./imagens/shopping-cart.png" />
+        <p class="total">`+total+`</p>
+        <img src= "./imagens/shopping-bag.png" style="width: 30px" />
+
+        `;
+
+        containerCart2.innerHTML += `
+        
+        <p class="total">`+total+`</p>
+        <img src= "./imagens/shopping-bag.png" style="width: 30px" />
 
         `;
         }
@@ -74,10 +83,13 @@ for(let i = 0; i < links.length; i++) {
 
 updateCart = () => {
     let itemsCart = document.getElementById("navCart");
-    let img = document.getElementById("img");
-    itemsCart.innerHTML = `<a href="#" class="closebtn" onclick="closeCart()"
-            >&times;</a
-        >`;
+    itemsCart.innerHTML = `
+        <div class="headerCart">
+            <h3>Minha sacola de compras</h3>
+            <a href="#" class="closebtn" onclick="closeCart()">
+                &times;
+            </a>
+        </div>`;
     items.map((val) => {
         if(val.quantidade > 0) {
             

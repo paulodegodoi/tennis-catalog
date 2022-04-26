@@ -17,11 +17,13 @@
         <div class="main">
             <div class="catalogo">
                 <div id="navCart" class="storeCart">
-                    <a href="#" class="closebtn" onclick="closeCart()"
-                        >&times;</a
-                    >
+                    <div class="headerCart">
+                        <h3>Minha sacola de compras</h3>
+                        <a href="#" class="closebtn" onclick="closeCart()">
+                            &times;
+                        </a>
+                    </div>
                 </div>
-                <!-- <div class="storeCart">aa</div> -->
                 <header class="navbar">
                     <nav>
                         <input type="text" placeholder="Buscar" />
@@ -29,11 +31,22 @@
                             <img src="imagens/loupe.png" alt="loupe" />
                         </button>
 
-                        <button class="cart" onclick="openCart()">
+                        <button id="btnCart" class="cart" onclick="openCart()">
                             <!-- <p id="amount"></p> -->
                             <img
-                                src="imagens/shopping-cart-empty.png"
+                                src="imagens/shopping-bag.png"
                                 alt="cart"
+                                style="width: 30px"
+                            />
+                        </button>
+                        <button
+                            class="btnCartResponsive cart"
+                            onclick="openCartResponsive()"
+                        >
+                            <img
+                                src="imagens/shopping-bag.png"
+                                alt="bag"
+                                style="width: 30px"
                             />
                         </button>
                     </nav>
