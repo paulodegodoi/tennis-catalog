@@ -20,6 +20,13 @@ const items = [
         quantidade: 0,
         numberItem: 0
     },
+    {
+        id: 3,
+        nome: 'HU NMD',
+        img: './imagens/adidas/HU NMD.jpg',
+        quantidade: 0,
+        numberItem: 0
+    },
 ]
 
 initStore = () => {
