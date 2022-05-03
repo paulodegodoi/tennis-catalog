@@ -40,7 +40,7 @@ initStore = () => {
             </div>
             <div class="title">
                 <h2>`+val.nome+`</h2>
-                <a key="`+val.id+`" href="#">Adicionar ao carrinho!</a>
+                <button><img src='/imagens/shopping-bag.png'><a key="`+val.id+`" href="#">Adicionar</a></button>
             </div>
         </div>
 
